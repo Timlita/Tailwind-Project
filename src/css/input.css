@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme{
+    --color-back-007: #00eee5;
+    --color-front-007: #0b0913;
+}
+
+.slibar-menu-item{
+    @apply border-2;
+    @apply border-gray-700/30;
+    @apply p-3;
+    @apply flex;
+    color:var(--color-front-007);
+    justify-items:center;
+    align-items: center;
+    gap: 10px;
+    @apply rounded-2xl;
+}
+    .active{
+        @apply bg-black;
+        @apply border-black;
+        @apply text-back-007;
+    }
+    html{
+        scroll-behavior:smooth;
+        scrollbar-width:thin;
+        scrollbar-color:#000#fff;
+    }
+@custom-variant dark (&:where(.dark, .dark *));
+
+*{
+    font-family: "Outfit",sans-serif;
+}
+
+@theme{
+    --animate-fade-in-scale: fade-in-scale 0.3s ease-out forwards infintite;
+    @keyframes fade-in-scale{
+        0%{
+            opacity: 0;
+            tranform:scale(0.95);
+        }
+        100%{
+            opacity: 1;
+            tranform:scale(1)
+        }
+    }
+    /*  color   */
+    --color-tnot-700: hsl(173 100% 34.9%);
+    --color-red-700:hsl(27.1 100% 72.3%);
+}
+
+*{
+    font-family: "Arvo",serif;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.433);
+    display:block;
+    position: absolute;
+   
+    transition: all 0.3s;
+    z-index:1;
+}
+.card:hover .bg{
+   
+    height: 90% ;
+    width: 90%;
+}
